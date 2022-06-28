@@ -1,0 +1,109 @@
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: blue;
+}
+.inner {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.top-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.top-nav {
+    display: flex;
+    flex-direction: row;
+}
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+}
+.logo {
+    height: auto;
+}
+.phone {
+    color: $primary-color;
+    background-color: #fff;
+}
+
+.phone:hover {
+    color: $primary-phone-hover;
+    padding-bottom: 4px;
+    border-bottom: 3px solid $primary-phone-hover;
+}
+
+.bars {
+    color: #fff;
+    background-color: $primary-color;
+    padding: 15px 15px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.bars:hover {
+    background-color: $primary-hover;
+}
+// .btn-cont {
+//     border: 1px solid black transparent;
+//     color: white;
+//     padding: 5px 15px;
+//     text-align: center;
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     margin-bottom: 0;
+//     font-weight: 400;
+//     transition-duration: 0.4s;
+//     cursor: pointer;
+//   }
+  
+//   .button-support {
+//     background-color: #2a6ec6;
+//     border-color: #2665b5;
+//     color: white;
+  
+//   }
+  
+//   .button-contact {
+//     background-color: #84858f;
+//     border-color: #797a85;
+//     color: white;
+//   }
+  
+//   .button2:hover {
+//     background-color: #008CBA;
+//     color: white;
+//   }
+@media (min-width :$breakpoint-m) {
+    .container{
+      width: 1200;
+    }
+  }
+  @media (min-width :$breakpoint-s) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width :$breakpoint-xs) {
+    .container {
+      width: 750px;
+    }
+  }
+
+// @media (min-width :$breakpoint-xs) {
+//     .phone {
+//       display: none;
+//     }
+//   }
