@@ -133,6 +133,13 @@ justify-content: center;
 
 // mixins
 
+.p {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 13px;
+  color: $primary-color;
+}
+
 @mixin icons {
     display: flex;
     border-radius: 50%;
@@ -243,31 +250,155 @@ $card-colors: (
   .container-welcome {
     display: flex;
     flex-direction: column;
-    padding: 50px 15px;
-}
-//   @each $card-colors, $color in $card-colors {
-//     .box-#{$card-colors}:hover {
-//         background-color: $color;
-//     }
-//   }
-
-
-//hover cards loop
-
-
-.h2 {
-    font-size: 1.3rem;
-    color: $primary-color;
-    padding-bottom: 10px;
-    margin: 0 0 11px;
+    padding: 50px 15px 0px;
+    background-color: $primary-color;
+    color: #ffffff;
+    
 }
 
-.p {
-    font-size: .8125rem;
-    line-height: 1.375rem;
-    margin-bottom: 13px;
-    color: $primary-color;
+
+// .h2 {
+//     font-size: 1.3rem;
+//     color: $primary-color;
+//     padding-bottom: 10px;
+//     margin: 0 0 11px;
+// }
+
+.h2a {
+  display: flex;
+  font-size: 36px;
+  padding-bottom: 40px;
+  font-weight: 600;
+  line-height: 39.6px;
+  text-size-adjust: 100%;
+  letter-spacing: 0.3px;
 }
+
+.pa {
+ font-size: 16px;
+ font-weight: 400;
+ text-align: left;
+ margin: 0px 0px 25px;
+ line-height: 30px;
+}
+
+.a1 {
+  color : #ffffff;
+  text-decoration: none;
+}
+.a1:hover {
+  text-decoration: underline;
+}
+
+// .btn-more {
+//   display: flex;
+//   flex-direction: row;
+//   width: fit-content;
+//   border: 1px solid transparent;
+//   border-radius: 5px;
+//   color: white;
+//   background-color: #272936;
+//   padding: 15px 30px;
+//   font-size: 20px;
+//   align-items: center;
+//   text-transform: uppercase;
+//   margin-bottom: 50px;
+//   font-weight: 400;
+//   a {
+//     text-decoration: none;
+//     color: #ffffff;
+//   }  
+// }
+
+@mixin welcome-btns {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 400;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }  
+}
+.btn-more {
+  @include welcome-btns;
+  background-color: #272936;
+}
+
+.fa-arrow-right {
+  margin-right: -4px;
+  margin-left: 12px;
+}
+.btn-more:hover {
+  background-color: #121318;
+}
+.h2b {
+  display: flex;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.star {
+  display: flex;
+  color: #ffa500;
+   .fa-star {
+   font-size: 42px;
+   padding-left: 4px;
+   margin-bottom: 30px;
+  }
+ }
+ .reviews {
+display: flex;
+flex-direction: column;
+ p {
+  font-size: 17.8px;
+  color: #a3a8ac;
+  text-align: left;
+  margin-bottom: 25px;
+  
+ }
+  h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: .4px;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+ }
+}
+.review-btns {
+  display: flex;
+  flex-direction: column
+}
+.btn-google {
+  @include welcome-btns;
+  background-color: #4387f6;
+  margin: 20px 8px 0px 0px;
+}
+.btn-trust {
+  @include welcome-btns;
+  background-color: #00b67b;
+  margin-top: 20px;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+    h2 {
+      padding: 50px 0 0;
+      font-size: 36px;
+      color: $primary-color;
+      font-weight: bold;
+    }
+}
+
 // .btn-read-container {
 //     display: flex;
 //     flex-direction: column;
