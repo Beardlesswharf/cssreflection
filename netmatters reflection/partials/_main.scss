@@ -159,7 +159,7 @@ justify-content: center;
     text-align: center;
     border-radius: 15px;
     top: 0;
-    transition: .5s ease;
+    transition: transform ease 500ms;
     border: 1px solid #ccc;
     box-shadow: rgba(0,0,0,0.1) 0px 3px 35px 0px;
     align-items: center;
@@ -200,6 +200,9 @@ $card-colors: (
   }
   [class^="read"] {
     @include read;
+  }
+  [class^="box"]:hover {
+    transform: translate(0, -10px);
   }
 
   @each $card-colors, $color in $card-colors {
@@ -412,18 +415,22 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  }
- 
+  transition: transform ease 500ms;
+   }
+
+.news-col:hover {
+  transform: translate(0, -10px);
+}  
+   
 .news-seo {
-  // height: 500px;
-  // width: 500px;
   display: flex;
   flex-direction: column;
-   img {
+  img {
     width: 100%;
     object-fit: cover;
   }
 }
+
 .news-img {
   display: flex;
   flex-direction: column;
@@ -531,40 +538,197 @@ flex-direction: column;
   margin-top: -30px;
   }
 
-
-// .news-text {
-//   // position: relative;
-// }
-// .btn-read-container {
-//     display: flex;
-//     flex-direction: column;
-//     height: 47px;
-//     width: 129.73px;
-//     background-color: $software-color1;
-//     border-color: $software-color1;
-//     border: 1px solid transparent;
-//     border-radius: 3px;
-//     color: white;
-//     padding: 5px 15px;
-//     font-size: 1.063rem;
-//     text-align: center;
-//     justify-content: center;
-//     text-transform: uppercase;
-//     margin-bottom: 0;
-//     font-weight: 400;
-//     transition-duration: 0.4s;
-//     cursor: pointer;
-//   }
+.view-cont {
+  display: flex;
+  flex-basis: 0;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-size: 26px;
   
+}
 
+.view-all {
+  text-decoration: none; 
+  color: $primary-color;
+   .fa-arrow-right {
+    margin-left: 7.5px;
+   }
+}
+.view-all:hover {
+  border-bottom: 2px solid $primary-color;
+}
 
-//   .read-it {
-//     @include buttons;
-//   }
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px;
+  background-color: #dddddd;
+   h2 {
+    color: $primary-color;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+   }
+}
 
+form label {
+  color: $primary-color;
+  font-weight: 600;
+}
+
+input.input-text {
+  width: 100%;
+  height: 47px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+}
+// input.chkbox {
+//   width: 32px;
+//   height: 32px;
+//   // outline: 1px solid $primary-color;
+// }
 
  
-
- .hidden {
-    display: none;
+.main {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
 }
+
+/* Hiding the initial checkbox */
+input[type=checkbox] {
+  visibility: hidden;
+}
+/* Creating a custom checkbox based on demand */
+.w3docs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  background-color: #dddddd;
+  border: 3px solid $primary-color;
+  border-radius: 3px;
+}
+/* Specify the background color to be shown when checkbox is active */
+.main input:active ~ .w3docs {
+  background-color: white;
+}
+/* Specify the background color to be shown when checkbox is checked */
+.main input:checked ~ .w3docs {
+  background-color: $primary-color;
+}
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.w3docs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Display checkmark when checked */
+.main input:checked ~ .w3docs:after {
+  display: block;
+}
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.main .w3docs:after {
+  left: 9px; //8px
+  bottom: 8px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hidden {
+  display: none;
+}
+.pp {
+  font-size: 16px;
+  text-align: left;
+   a {
+    color: $primary-color;
+   }
+}
+.chkbox {
+  display: flex;
+  flex-direction: row;
+  color: $primary-color;
+}
+.sub-button {
+  @include welcome-btns;
+  @include news-button;
+  background-color: $primary-color;
+  padding: 10px 15px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 47px 15px 43px;
+  background-color: $primary-color;
+}
+.top-1, .top-2, .bot-1, .bot-2, .bot-3 {
+  h4 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+  a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  }
+  ul {
+    list-style-type: none;
+    color: #ffffff;
+    font-size: 13px;
+  }
+}
+.top-2 {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.top-1, .top-2, .bot-2, .bot-3 {
+  margin-bottom: 30px;
+}
+.bot-2, .bot-3 {
+  margin-left: 40px;
+}
+
+.pos {
+  transform: translateX(79px); //ensure sml bp only
+}
+
+[class^="bot"] {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+.low-sec {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-top:  10px;
+  border-top: 1px solid #888;
+}
+.ok {
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+}
+ 
+ 

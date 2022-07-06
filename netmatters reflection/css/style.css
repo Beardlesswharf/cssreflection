@@ -127,7 +127,7 @@ p {
   text-align: center;
   border-radius: 15px;
   top: 0;
-  transition: 0.5s ease;
+  transition: transform ease 500ms;
   border: 1px solid #ccc;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 35px 0px;
   align-items: center;
@@ -150,6 +150,10 @@ p {
   font-weight: 400;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+
+[class^=box]:hover {
+  transform: translate(0, -10px);
 }
 
 .read-soft {
@@ -478,6 +482,11 @@ p {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  transition: transform ease 500ms;
+}
+
+.news-col:hover {
+  transform: translate(0, -10px);
 }
 
 .news-seo {
@@ -721,8 +730,237 @@ p {
   margin-top: -30px;
 }
 
+.view-cont {
+  display: flex;
+  flex-basis: 0;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-size: 26px;
+}
+
+.view-all {
+  text-decoration: none;
+  color: #333645;
+}
+.view-all .fa-arrow-right {
+  margin-left: 7.5px;
+}
+
+.view-all:hover {
+  border-bottom: 2px solid #333645;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px;
+  background-color: #dddddd;
+}
+.sign-up h2 {
+  color: #333645;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+form label {
+  color: #333645;
+  font-weight: 600;
+}
+
+input.input-text {
+  width: 100%;
+  height: 47px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+}
+
+.main {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Hiding the initial checkbox */
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+/* Creating a custom checkbox based on demand */
+.w3docs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  background-color: #dddddd;
+  border: 3px solid #333645;
+  border-radius: 3px;
+}
+
+/* Specify the background color to be shown when checkbox is active */
+.main input:active ~ .w3docs {
+  background-color: white;
+}
+
+/* Specify the background color to be shown when checkbox is checked */
+.main input:checked ~ .w3docs {
+  background-color: #333645;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.w3docs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked ~ .w3docs:after {
+  display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.main .w3docs:after {
+  left: 9px;
+  bottom: 8px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
 .hidden {
   display: none;
+}
+
+.pp {
+  font-size: 16px;
+  text-align: left;
+}
+.pp a {
+  color: #333645;
+}
+
+.chkbox {
+  display: flex;
+  flex-direction: row;
+  color: #333645;
+}
+
+.sub-button {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-top: 30px;
+  font-size: 17px;
+  margin-bottom: 0px;
+  background-color: #333645;
+  padding: 10px 15px;
+}
+.sub-button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.sub-button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 47px 15px 43px;
+  background-color: #333645;
+}
+
+.top-1 h4, .top-2 h4, .bot-1 h4, .bot-2 h4, .bot-3 h4 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+.top-1 a, .top-2 a, .bot-1 a, .bot-2 a, .bot-3 a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+}
+.top-1 ul, .top-2 ul, .bot-1 ul, .bot-2 ul, .bot-3 ul {
+  list-style-type: none;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.top-2 {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.top-1, .top-2, .bot-2, .bot-3 {
+  margin-bottom: 30px;
+}
+
+.bot-2, .bot-3 {
+  margin-left: 40px;
+}
+
+.pos {
+  transform: translateX(79px);
+}
+
+[class^=bot] a:hover {
+  text-decoration: underline;
+}
+
+.low-sec {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #888;
+}
+
+.ok {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  text-align: left;
 }
 
 header {
