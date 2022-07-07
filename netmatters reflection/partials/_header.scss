@@ -12,8 +12,6 @@ header {
 .container {
     display: flex;
     flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -21,6 +19,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: space-between;
 }
 .top-nav {
     display: flex;
@@ -45,12 +44,21 @@ header {
     display: flex;
     flex-direction: row;
 }
+
 .logo {
     height: auto;
+    width: 100%;
+    padding-top: 10px;
+}
+.phone-bars {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
 }
 .phone {
     color: $primary-color;
     background-color: #fff;
+    padding: 4px 4px;
 }
 
 .phone:hover {
@@ -64,20 +72,28 @@ header {
     background-color: $primary-color;
     padding: 15px 15px;
     border-radius: 3px;
-    margin-left: 20px;
+    margin-left: 16px;
 }
 
 .bars:hover {
     background-color: $primary-hover;
 }
 
-.search-bar1 {
-
-  width: 100%;
-}
-
-.search-label {
+.search-bar {
     display: none;
+}
+.input-search {
+  width: 100%;
+  height: 47px;
+  margin-top: 5px;
+  padding: 5px 40px 5px 15px;
+  border: 2px solid rgba(0,0,0,0.1);
+  outline: 1px solid hsla(0,0%,100%,.2);
+  border-color: #ccc;
+  box-shadow: (0, 0, 0, 0.075) 0px 1px 1px 0px inset;
+  font-size: 14px;
+  background-color:rgba(0, 0, 0, .1);
+  font-family: 'poppins';
 }
 
   

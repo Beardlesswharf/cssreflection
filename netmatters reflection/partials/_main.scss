@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    padding: 0px;
     margin: 0px;
 }
 
@@ -23,18 +22,37 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    padding-right: 15px;
      }
 .main-outer {
     height: 100%;
-    margin-right: 20px; //problem with scroll bar guttering
+     //problem with scroll bar guttering
 }
+.banner {
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  background-position: center;
+  // background:black url(../img/main-pic.webp) center;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/main-pic.webp");
+ }
+  // .banner-over{
+  //   display: flex;
+  //   opacity: 0.5;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 10;
+  // }
  .content-container {
     display: flex;
     flex-direction: column;
     padding: 3.75rem 0;
     text-align: center;
-    color: #fff
-
+    color: #fff;
+    
  }
 
  h1 {
@@ -59,19 +77,14 @@ p {
     padding-left: 15px;
     padding-right: 15px;
 }
-.banner {
-min-height: 550px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
- .main-pic {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    vertical-align: middle;
-    border: 0;
-     }
+
+//  .banner {
+//     object-fit: cover;
+//     height: 100%;
+//     width: 100%;
+//     vertical-align: middle;
+//     border: 0;
+//      }
 #services {
     background-color: #ffffff;
     display: flex;
@@ -584,6 +597,7 @@ input.input-text {
   margin-bottom: 15px;
   padding: 5px 15px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 // input.chkbox {
 //   width: 32px;
@@ -657,6 +671,7 @@ like a tickmark */
 .pp {
   font-size: 16px;
   text-align: left;
+  line-height: 32px;
    a {
     color: $primary-color;
    }
@@ -672,20 +687,26 @@ like a tickmark */
   background-color: $primary-color;
   padding: 10px 15px;
 }
-
+.sub-button:hover {
+  background-color: #22242e;
+  border-color: #191a22;
+}
 footer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  // flex-wrap: wrap;
   padding: 47px 15px 43px;
   background-color: $primary-color;
 }
 .top-1, .top-2, .bot-1, .bot-2, .bot-3 {
+  display: flex;
+  flex-direction: column;
   h4 {
     color: white;
     font-weight: 400;
     margin-bottom: 26px;
   }
+  
   a {
   text-decoration: none;
   color: #ffffff;
@@ -695,8 +716,21 @@ footer {
     list-style-type: none;
     color: #ffffff;
     font-size: 13px;
+    padding-inline-start: 0;
   }
 }
+// .top-1, .top-2 {
+//   width: fit-content;
+// }
+.top-group {
+  display: flex;
+  flex-direction: row;
+}
+.bot-group {
+  display: flex;
+  flex-direction: row;
+}
+
 .top-2 {
   margin-left: 70px;
   margin-right: 70px;
@@ -704,31 +738,79 @@ footer {
 .top-1, .top-2, .bot-2, .bot-3 {
   margin-bottom: 30px;
 }
-.bot-2, .bot-3 {
+.bot-2 {
   margin-left: 40px;
 }
-
-.pos {
-  transform: translateX(79px); //ensure sml bp only
+.another-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
+// .pos {
+//   transform: translateX(79px); //ensure sml bp only
+// }
 
 [class^="bot"] {
   a:hover {
     text-decoration: underline;
-  }
+ }
 }
+
 .low-sec {
   display: flex;
-  flex-direction: column;
-  padding-top: 10px;
+  flex-direction: row;
+  padding-top: 15px;
   margin-top:  10px;
   border-top: 1px solid #888;
+  justify-content: space-between;
 }
 .ok {
     font-size: 13px;
     font-weight: 400;
+    line-height: 20.5714px;
     color: white;
     text-align: left;
+    margin: 0;
+      a {
+        text-decoration: none;
+        color: white;
+      }
 }
- 
- 
+.social-media {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-10px);
+  
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 10px 10px;
+      max-height: 38px;
+   }
+}
+.facebook:hover {
+  background-color: #3b5998;
+  border-radius: 50%;
+  background-origin: padding-box;
+}
+.twitter:hover {
+  background-color: #00aced;
+  border-radius: 50%;
+  background-origin: padding-box;
+}
+.insta:hover {
+  background-color: #d93175;
+  border-radius: 50%;
+  background-origin: padding-box;
+}
+.lin:hover {
+  background-color: #0077b5;
+  border-radius: 50%;
+  background-origin: padding-box;
+}
+// .facebook:hover {
+//   background-color: #3b5998;
+//   border-radius: 50%;
+//   background-origin: padding-box;
+// }
