@@ -128,6 +128,7 @@ header {
   font-size: 14px;
   background-color: rgba(0, 0, 0, 0.1);
   font-family: "poppins";
+  color: rgb(85, 85, 85);
 }
 
 @media (min-width: 768px) {
@@ -881,6 +882,8 @@ input.input-text {
   padding: 5px 15px;
   border: 1px solid #ccc;
   font-size: 14px;
+  font-family: "poppins";
+  color: rgb(85, 85, 85);
 }
 
 .main {
@@ -999,6 +1002,7 @@ like a tickmark */
   margin-bottom: 0px;
   background-color: #333645;
   padding: 10px 15px;
+  margin-top: 27px;
 }
 .sub-button a {
   text-decoration: none;
