@@ -1,0 +1,22 @@
+
+  .sponsors {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0px;
+   }
+
+  .img-sponsor {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+  .img-sponsor:hover {
+    -webkit-filter: grayscale(0);
+    filter: none;
+  }
+ 
+  .item {
+    display: flex;
+    padding: 0px 20px;
+    align-self: center;
+  }
+  

@@ -22,14 +22,119 @@ body {
 #wrapper {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  padding-right: 15px;
 }
 
 .main-outer {
   height: 100%;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  height: auto;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.phone-bars {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.phone {
+  color: #333645;
+  background-color: #fff;
+  padding: 4px 4px;
+}
+
+.phone:hover {
+  color: #121419;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #121419;
+}
+
+.bars {
+  color: #fff;
+  background-color: #333645;
+  padding: 15px 15px;
+  border-radius: 3px;
+  margin-left: 16px;
+}
+
+.bars:hover {
+  background-color: #22242e;
+}
+
+.search-bar {
+  display: none;
+}
+
+.form-input {
+  position: relative;
+}
+.form-input .fa-magnifying-glass {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+  font-size: 20px;
+  color: #333645;
+  cursor: pointer;
+}
+
+.input-search {
+  width: 100%;
+  height: 47px;
+  margin-top: 5px;
+  padding: 5px 40px 5px 15px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  outline: 1px solid hsla(0deg, 0%, 100%, 0.2);
+  border-color: #ccc;
+  box-shadow: 0, 0, 0, 0.075 0px 1px 1px 0px inset;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: "poppins";
+}
+
+@media (min-width: 768px) {
+  .phone {
+    display: none;
+  }
+}
 .banner {
   min-height: 550px;
   display: flex;
@@ -39,6 +144,7 @@ body {
   -o-object-fit: fill;
      object-fit: fill;
   background-position: center;
+  background-size: cover;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/main-pic.webp");
 }
 
@@ -270,6 +376,7 @@ p {
 
 .sponsors {
   display: flex;
+  justify-content: space-evenly;
   padding: 50px 0px;
 }
 
@@ -930,6 +1037,7 @@ footer {
   list-style-type: none;
   color: #ffffff;
   font-size: 13px;
+  line-height: 22px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
@@ -1023,127 +1131,4 @@ footer {
   background-color: #0077b5;
   border-radius: 50%;
   background-origin: padding-box;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.inner {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.top-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.top-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-.bottom-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.logo {
-  height: auto;
-  width: 100%;
-  padding-top: 10px;
-}
-
-.phone-bars {
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-}
-
-.phone {
-  color: #333645;
-  background-color: #fff;
-  padding: 4px 4px;
-}
-
-.phone:hover {
-  color: #121419;
-  padding-bottom: 4px;
-  border-bottom: 3px solid #121419;
-}
-
-.bars {
-  color: #fff;
-  background-color: #333645;
-  padding: 15px 15px;
-  border-radius: 3px;
-  margin-left: 16px;
-}
-
-.bars:hover {
-  background-color: #22242e;
-}
-
-.search-bar {
-  display: none;
-}
-
-.form-input {
-  position: relative;
-}
-.form-input .fa-magnifying-glass {
-  position: absolute;
-  right: 10px;
-  top: 18px;
-  font-size: 20px;
-  color: #333645;
-  cursor: pointer;
-}
-
-.input-search {
-  width: 100%;
-  height: 47px;
-  margin-top: 5px;
-  padding: 5px 40px 5px 15px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  outline: 1px solid hsla(0deg, 0%, 100%, 0.2);
-  border-color: #ccc;
-  box-shadow: 0, 0, 0, 0.075 0px 1px 1px 0px inset;
-  font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.1);
-  font-family: "poppins";
-}
-
-@media (min-width: 1260px) {
-  .container {
-    width: 1200;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 768px) {
-  .phone {
-    display: none;
-  }
 }/*# sourceMappingURL=style.css.map */

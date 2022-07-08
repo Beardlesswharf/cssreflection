@@ -126,21 +126,21 @@ header {
 //     background-color: #008CBA;
 //     color: white;
 //   }
-@media (min-width :$breakpoint-m) {
-    .container{
-      width: 1200;
-    }
-  }
-  @media (min-width :$breakpoint-s) {
-    .container {
-      width: 970px;
-    }
-  }
-  @media (min-width :$breakpoint-xs) {
-    .container {
-      width: 750px;
-    }
-  }
+// @media (min-width :$breakpoint-m) {
+//     .container{
+//       width: 1200;
+//     }
+//   }
+//   @media (min-width :$breakpoint-s) {
+//     .container {
+//       width: 970px;
+//     }
+//   }
+//   @media (min-width :$breakpoint-xs) {
+//     .container {
+//       width: 750px;
+//     }
+//   }
 
 @media (min-width :$breakpoint-xs) {
     .phone {
