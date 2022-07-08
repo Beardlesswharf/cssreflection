@@ -84,6 +84,9 @@ footer {
           text-decoration: none;
           color: white;
         }
+        a:hover {
+          text-decoration: underline;
+       }
   }
   .social-media {
     display: flex;
@@ -96,6 +99,7 @@ footer {
         padding: 10px 10px 10px;
         max-height: 38px;
      }
+     
   }
   .facebook:hover {
     background-color: #3b5998;
