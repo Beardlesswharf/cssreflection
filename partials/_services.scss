@@ -2,62 +2,41 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 50px 15px 10px;
+    padding: 50px 0px 10px;
+    margin-top: 15px;
+    // margin-left: 3.5px;
+    // margin-right: 3.5px;
 }
+.service-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 720px;
+  height: 48px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: left;
+  padding-left: 15px;
+}
+
 .card-section {
     display: flex;
     color: $primary-color;
     font-size: 43.2px;
-    line-height: 47.52px;
     font-weight: bold;
-    margin: 0 0 10px;
 }
 .card-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 1px;
+    align-items: center;
+    padding: 0 15px;
     // padding-left: 15px;
     // padding-left: 15px;
 }
 
-// .fa-solid, .fa-grid {
-//     color: black;
-// }
-// .software {
-//     display: flex;
-//     flex-direction: column;
-//     text-decoration: none;
-//     margin-top: 30px;
-//     padding: 30px;
-//     text-align: center;
-//     border-radius: 15px;
-//     top: 0;
-//     transition: .5s ease;
-//     border: 1px solid #ccc;
-//     box-shadow: rgba(0,0,0,0.1) 0px 3px 35px 0px;
-//     align-items: center;
-// }
-// @mixin card {
-//     display: flex;
-//     flex-direction: column;
-//     text-decoration: none;
-//     margin-top: 30px;
-//     padding: 30px;
-//     text-align: center;
-//     border-radius: 15px;
-//     top: 0;
-//     transition: .5s ease;
-//     border: 1px solid #ccc;
-//     box-shadow: rgba(0,0,0,0.1) 0px 3px 35px 0px;
-//     align-items: center;
-// }
 
-// [class^="box"] {
-//     @include card;
-//   }
-
-// mixins
 
 .p {
     font-size: 13px;
@@ -89,6 +68,8 @@
       border: 1px solid #ccc;
       box-shadow: rgba(0,0,0,0.1) 0px 3px 35px 0px;
       align-items: center;
+      max-width: 720px;
+      width: 100%;
   }
   @mixin read {
       display: flex;
@@ -155,4 +136,68 @@
           background-color: #fff;
       }
     }   
-  
+  @media (min-width :992px) {
+    .next-3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 941px;
+    }
+    [class^="box"] {
+      max-width: 293.33px;
+      height: 335.875px;
+      width: 100%;
+      justify-content: center;
+    }
+    .service-title {
+      width: 100%;
+      max-width: 941px;
+      margin-left: 15px;
+      margin: 0 auto;
+    }
+    .next-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 941px;
+        [class^="box"] {
+          max-width: 455px;
+          height: 291.88px;
+          width: 100%;
+          justify-content: center;
+        }
+    }
+  }
+  @media (min-width :1260px) {
+    [class^="box"] {
+      width: 100%;
+      max-width: 370px;
+      height: 314.725px;
+  }
+  .service-title {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+}
+  }
+  @media (min-width :1260px) {
+  .final-4 {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+      [class^="box"] {
+      width: 100%;
+      max-width: 270px;
+      height: 313.88px;
+    }
+   .next-2 {
+    display: flex;
+    flex-direction: row;
+   }
+  }
+}

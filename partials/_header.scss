@@ -5,8 +5,11 @@ header {
 }
 .inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 20px 0px;
+    justify-content: center;
+    height: 168px;
+    
 }
 
 .container {
@@ -14,6 +17,9 @@ header {
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
+    max-height: 128px;
+    width: 100%;
+    justify-content: center;
 }
 .top-container {
     display: flex;
@@ -24,6 +30,8 @@ header {
 .top-nav {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    
 }
 // .top-nav {
 //     display: flex;
@@ -44,21 +52,30 @@ header {
     display: flex;
     flex-direction: row;
 }
+.logo-container {
+    display: flex;
+    // align-items: center;
+    width: 100%;
+    max-width: 402px;
+    height: 100%;
+}
 
 .logo {
-    height: auto;
     width: 100%;
-    padding-top: 10px;
+    height: auto;
+    display: block;
 }
 .phone-bars {
   display: flex;
   align-items: center;
   padding-left: 16px;
+  height: 70px;
 }
 .phone {
     color: $primary-color;
     background-color: #fff;
     padding: 4px 4px;
+    font-size: 20px;
 }
 
 .phone:hover {
@@ -70,11 +87,16 @@ header {
 .bars {
     color: #fff;
     background-color: $primary-color;
-    padding: 15px 15px;
+    padding: 5px 15px;
     border-radius: 3px;
     margin-left: 16px;
+    width: 63px;
+    height: 56px;
+    text-align: center;
 }
-
+.fa-bars {
+    font-size: 35px;
+}
 .bars:hover {
     background-color: $primary-hover;
 }
@@ -84,20 +106,24 @@ header {
 }
 .form-input {
   position: relative;
+  width: 100%;
   
   .fa-magnifying-glass {
   position: absolute;
   right: 10px;
-  top: 18px;
+  top: 22px;
   font-size: 20px;
   color: $primary-color;
   cursor: pointer;
   }
 }
+.form-input-bp {
+    align-items: center;
+}
 .input-search {
   width: 100%;
   height: 47px;
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 5px 40px 5px 15px;
   border: 2px solid rgba(0,0,0,0.1);
   outline: 1px solid hsla(0,0%,100%,.2);
@@ -109,42 +135,288 @@ header {
   color: rgb(85, 85, 85);
 }
 
+
+
+.form-input-bp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
   
-//   .button-support {
-//     background-color: #2a6ec6;
-//     border-color: #2665b5;
-//     color: white;
-  
-//   }
-  
-//   .button-contact {
-//     background-color: #84858f;
-//     border-color: #797a85;
-//     color: white;
-//   }
-  
-//   .button2:hover {
-//     background-color: #008CBA;
-//     color: white;
-//   }
-// @media (min-width :$breakpoint-m) {
-//     .container{
-//       width: 1200;
+.width-adj {
+    width: 100%;
+}
+// BUTTONS
+@mixin top-btns {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: white;
+    padding: 5px 15px;
+    font-size: 18px;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }  
+  }
+.btn-support {
+    @include top-btns;
+    background-color: $support-color;
+    width: 141.61px;
+    height: 56px;
+    margin-left: 84px;
+    }
+  .btn-support:hover {
+      background-color: $support-color-hover;
+     }
+  .btn-contact {
+    @include top-btns;
+    background-color: $contsearch-color;
+    width: 149.42px;
+    height: 56px;
+    margin-left: 20px;
+    }
+  .btn-contact:hover {
+      background-color: $contsearch-color-hover;
+     }
+.top-btns {
+    display: flex;
+    flex-direction: row;
+    
+  }
+ .fa-paper-plane {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+  .fa-computer-mouse {
+    font-size: 20px;
+    margin-right: 7.5px;
+  }
+
+// bottom nav
+
+.serv-nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: $primary-color;
+    justify-content: center;
+    height: 99.02px;
+    color: white;
+    align-items: center;
+        P {
+            font-size: 10px;
+            height: 11px;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        i {
+            font-size: 20px;
+        }
+}
+@each $card-colors, $color in $card-colors {
+    .bnav-#{$card-colors} {
+    color: $color;
+    }
+}
+[class^="list"] {
+    width: 134.28px;
+    position: relative;
+}
+[class^="list"]:hover {
+    [class^="sl"] {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    [class^="bnav"] {
+        color: white;
+    }
+ 
+}
+[class^="size"] {
+    height: 99.02px;
+    padding-top: 18px;
+}
+.serv-a {
+    text-decoration: none;
+    color: white;
+}
+[class^="sl"] {
+text-align: center;
+display: none;
+list-style-type: none;
+padding-left: 0;
+width: 134.28px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+ li {
+    padding: 10px 15.02px;
+    font-size: 13px;
+ }
+ a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+}
+[class^="list"]:hover 
+{
+    @each $card-colors, $color in $card-colors {
+    .size-#{$card-colors} {
+    background-color: $color;
+    }
+}
+    @each $nav-colors, $color in $nav-colors {
+    .sl-#{$nav-colors} {
+    background-color: $color;
+    }
+}
+
+}
+// @media (max-width :501px) {
+//     .logo {
+//         height: 56.17px;
+//         width: 322.59px
 //     }
-//   }
-//   @media (min-width :$breakpoint-s) {
-//     .container {
-//       width: 970px;
-//     }
-//   }
-//   @media (min-width :$breakpoint-xs) {
-//     .container {
-//       width: 750px;
-//     }
-//   }
+
+// }
+
 
 @media (min-width :$breakpoint-xs) {
     .phone {
       display: none;
     }
+    .bottom-container {
+        display: none;
+    }
+    .top-container {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        width: 345px;
+        height: 60.06px;
+    }
+    .container {
+       max-height: 110px;
+       width: 750px;
+       margin: 0 auto;
+    }
+    .inner {
+        max-height: 110px;
+    }
+   
+    .fa-magnifying-glass {
+        position: relative;
+        color: white;
+        background-color: $contsearch-color;
+        padding: 16px 19.4px;
+        font-size: 24px;
+        border-radius: 0 3px 3px 0;
+    }
+    .input-search {
+        margin-top: 0;
+        height: 56px;
+    
+    }
+    .your-name {
+        align-items: center;
+    }
+    // .width-adj {
+    //     display: flex;
+    //     width: 100%;
+    //     align-items: center;
+    // }
+    .phone-bars {
+        padding-left: 4px;
+    }
+    .input-search {
+        padding: 5px 15px;
+        max-width: 174px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+    .input-search:focus {
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(91 192 222 / 60%);
+    }
+    // .width-adj {
+    //     padding-left: 55px;
+    // }
+  }
+
+  @media (max-width :767px) {
+    .form-input-bp {
+        display: none;
+        
+    }
+  }
+
+  @media (max-width :991px) {
+    .top-btns {
+        display: none;
+    }
+    .serv-nav {
+        display: none;
+    }
+  }
+  @media (min-width :992px) {
+    .container {
+        width: 975px;
+    }
+    #search {
+        display: none;
+        border-radius: 3px;
+    }
+    .fa-magnifying-glass {
+        border-radius: 3px;
+    }
+    .logo {
+       width: 374.16px;
+       height: 65.14px; 
+    }
+    .width-adj {
+        padding-left: 20px;
+    }
+  }
+  @media (min-width :1259px) {
+    #search {
+        display: flex;
+        min-width: 240px;
+    }
+    .fa-magnifying-glass {
+        border-radius: 0 3px 3px 0;
+    }
+    [class^="list"], [class^="sl"] {
+        width: 167.14px;
+    }
+    [class^="sl"] {
+    li {font-size: 16px; 
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    }
+    .logo {
+        width: 370px;
+        height: 64.422px; 
+     }
+     .container {
+        width: 1200px;
+     }
   }

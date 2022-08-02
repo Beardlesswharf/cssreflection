@@ -28,6 +28,7 @@
   .news-seo {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
     img {
       width: 100%;
       object-fit: cover;
@@ -42,6 +43,7 @@
   
   .mini-news:hover {
     text-decoration: underline;
+    
   }
   .news-text {
     padding: 30px 30px;
@@ -55,13 +57,14 @@
   
     @mixin mini-news {
       position: absolute;
-      top: 10px;
+      top: 20px;
       right: 0px;
       font-size: 13px;
       padding: 1px 10px;
       color: white;
       text-decoration-style: solid;
       text-decoration: none;
+      z-index: 3;
       }
   .mini-news {
     @include mini-news;

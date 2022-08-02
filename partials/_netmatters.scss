@@ -1,7 +1,8 @@
 .container-welcome {
     display: flex;
     flex-direction: column;
-    padding: 50px 15px 0px;
+    padding: 0 15px 0px;
+    padding-top: 43px;
     background-color: $primary-color;
     color: #ffffff;
     
@@ -86,7 +87,7 @@
 
 .fa-arrow-right {
   margin-right: -4px;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 .btn-more:hover {
   background-color: #121318;
@@ -101,8 +102,9 @@
   color: #ffa500;
    .fa-star {
    font-size: 42px;
-   padding-left: 4px;
+   padding-right: 4px;
    margin-bottom: 30px;
+   margin-top: 8px;
   }
  }
  .reviews {
@@ -120,18 +122,20 @@ flex-direction: column;
   font-size: 20.8px;
   font-style: italic;
   letter-spacing: .4px;
-  line-height: 1.875rem;
+  line-height: 32px;
   margin-bottom: 25px;
  }
 }
 .review-btns {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 .btn-google {
   @include welcome-btns;
   background-color: #4387f6;
   margin: 20px 8px 0px 0px;
+  width: 263.19px;
+  height: 55px;
   }
 .btn-google:hover {
     background-color: #116af4;
@@ -140,7 +144,59 @@ flex-direction: column;
   @include welcome-btns;
   background-color: #00b67b;
   margin-top: 20px;
+  width: 294.05px;
+  height: 55px;
   }
 .btn-trust:hover {
     background-color: #009b69;
+   }
+   @media (min-width :616px){
+    .review-btns {
+      flex-direction: row;
+    }
+    .btn-google {
+      flex-direction: row;
+    
+    }
+    .btn-trust {
+      flex-direction: row;
+      margin-left: 5px;
+    }
+
+   }
+   @media (min-width :768px) {
+    .break-small {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+   }
+   @media (min-width :992px)
+   {
+    .break-small {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .break-med-col {
+      padding: 0 15px;
+    }
+    .review-btns {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn-trust {
+      margin-left: 5px;
+    }
+    .h2b {
+      padding-top: 10px;
+    }
+   }
+   @media (min-width :1259px) {
+    .review-btns {
+      flex-direction: row;
+      margin-top: 35px;
+
+    }
    }

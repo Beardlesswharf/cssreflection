@@ -30,3 +30,12 @@ $devtrain-color1: #ce4125;
 $devtrain-color2: #a3331d;
 
 
+$nav-colors: (
+    'soft' : $software-color2,
+    'it' : $itsup-color2,
+    'digi' : $digital-color2,
+    'tele' : $telecom-color2,
+    'web' :$webdesign-color2,
+    'cyb' : $cyber-color2,
+    'dev' : $devtrain-color2
+  )
