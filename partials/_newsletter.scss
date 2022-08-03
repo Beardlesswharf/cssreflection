@@ -1,8 +1,10 @@
 .sign-up {
     display: flex;
     flex-direction: column;
-    padding: 58px 15px 50px;
+    padding: 58px 0px 50px;
     background-color: #dddddd;
+    padding: 55px 15px 51px 15px;
+    
      h2 {
       color: $primary-color;
       font-size: 32px;
@@ -119,9 +121,43 @@
     @include news-button;
     background-color: $primary-color;
     padding: 10px 15px;
-    margin-top: 27px;
+    margin-top: 29px;
   }
   .sub-button:hover {
     background-color: #22242e;
     border-color: #191a22;
+  }
+
+  @media (min-width: 768px) {
+    .sizing-col {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 992px) {
+    .sizing-col {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+    .form-col-bp {
+      display: flex;
+      flex-direction: row;
+    }
+    .your-name, .your-email {
+      width: 455px;
+    }
+    .your-name {
+      margin-right: 30px;
+    }
+  }
+  @media (min-width: 1260px) {
+    .sizing-col {
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+    }
+    .your-name, .your-email {
+      width: 570px;
+    }
   }

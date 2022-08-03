@@ -463,7 +463,7 @@ header {
   background-color: #4183d7;
   width: 141.61px;
   height: 56px;
-  margin-left: 84px;
+  margin-left: 80px;
 }
 .btn-support a {
   text-decoration: none;
@@ -765,6 +765,9 @@ header {
   }
   .container {
     width: 1200px;
+  }
+  .width-adj {
+    width: 323px;
   }
 }
 .banner {
@@ -1475,8 +1478,9 @@ p {
 .sign-up {
   display: flex;
   flex-direction: column;
-  padding: 58px 15px 50px;
+  padding: 58px 0px 50px;
   background-color: #dddddd;
+  padding: 55px 15px 51px 15px;
 }
 .sign-up h2 {
   color: #333645;
@@ -1624,7 +1628,7 @@ like a tickmark */
   margin-bottom: 0px;
   background-color: #333645;
   padding: 10px 15px;
-  margin-top: 27px;
+  margin-top: 29px;
 }
 .sub-button a {
   text-decoration: none;
@@ -1640,6 +1644,39 @@ like a tickmark */
   border-color: #191a22;
 }
 
+@media (min-width: 768px) {
+  .sizing-col {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .sizing-col {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+  .form-col-bp {
+    display: flex;
+    flex-direction: row;
+  }
+  .your-name, .your-email {
+    width: 455px;
+  }
+  .your-name {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1260px) {
+  .sizing-col {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  .your-name, .your-email {
+    width: 570px;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;

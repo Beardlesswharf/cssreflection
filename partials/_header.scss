@@ -168,7 +168,7 @@ header {
     background-color: $support-color;
     width: 141.61px;
     height: 56px;
-    margin-left: 84px;
+    margin-left: 80px;
     }
   .btn-support:hover {
       background-color: $support-color-hover;
@@ -418,5 +418,8 @@ a:hover {
      }
      .container {
         width: 1200px;
+     }
+     .width-adj {
+        width: 323px;
      }
   }
