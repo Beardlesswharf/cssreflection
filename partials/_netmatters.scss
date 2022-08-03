@@ -166,7 +166,7 @@ flex-direction: column;
    }
    @media (min-width :768px) {
     .break-small {
-      max-width: 750px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
@@ -176,18 +176,19 @@ flex-direction: column;
     .break-small {
       display: flex;
       flex-direction: row;
-      max-width: 1200px;
+      max-width: 970px;
       margin: 0 auto;
     }
     .break-med-col {
       padding: 0 15px;
+      max-width: 485px;
     }
     .review-btns {
       display: flex;
       flex-direction: column;
     }
     .btn-trust {
-      margin-left: 5px;
+      margin-left: 0px;
     }
     .h2b {
       padding-top: 10px;
@@ -198,5 +199,18 @@ flex-direction: column;
       flex-direction: row;
       margin-top: 35px;
 
+    }
+    .break-small {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .break-med-col {
+      padding: 0 15px;
+      max-width: 600px;
+    }
+    .btn-trust {
+      margin-left: 4px;
     }
    }
