@@ -1577,7 +1577,7 @@ like a tickmark */
   transform: rotate(45deg);
 }
 
-.hidden {
+.hidden, .bottom-sponsor {
   display: none;
 }
 
@@ -1649,12 +1649,28 @@ like a tickmark */
     max-width: 720px;
     margin: 0 auto;
   }
+  .bottom-sponsor {
+    display: flex;
+    flex-direction: row;
+    max-width: 750px;
+    padding: 50 15px;
+    margin: 0 auto;
+  }
+  .bottom-sponsor img {
+    height: auto;
+    width: 100%;
+  }
 }
 @media (min-width: 992px) {
   .sizing-col {
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
+  }
+  .bottom-sponsor {
+    display: flex;
+    flex-direction: row;
+    max-width: 970px;
   }
   .form-col-bp {
     display: flex;
@@ -1672,6 +1688,11 @@ like a tickmark */
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
+  }
+  .bottom-sponsor {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
   }
   .your-name, .your-email {
     width: 570px;
