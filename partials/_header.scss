@@ -388,7 +388,12 @@ a:hover {
     }
     .width-adj {
         padding-left: 20px;
+        width: 83.19px;
     }
+    .form-input-bp, .your-name {
+        width: 10px;
+    }
+
   }
   @media (min-width :1259px) {
     #search {
