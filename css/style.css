@@ -309,6 +309,23 @@ body {
     flex-direction: row;
   }
 }
+.hamburger-menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 26px;
+  width: 33px;
+  cursor: pointer;
+  margin-left: -2px;
+}
+
+.hamburger-menu .bar {
+  height: 4px;
+  background: white;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -783,7 +800,6 @@ header {
   object-fit: fill;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/main-pic.webp");
 }
 
 .content-container {
@@ -821,6 +837,11 @@ p {
 @media (min-width: 768px) {
   .text {
     max-width: 660px;
+  }
+}
+@media (max-width: 992px) {
+  .banner {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/main-pic.webp");
   }
 }
 @media (min-width: 992px) {
@@ -899,6 +920,10 @@ p {
   line-height: 39.6px;
   text-size-adjust: 100%;
   letter-spacing: 0.3px;
+}
+
+.h2b {
+  line-height: 39.6px;
 }
 
 .pa {
@@ -1078,9 +1103,6 @@ p {
   .btn-trust {
     margin-left: 0px;
   }
-  .h2b {
-    padding-top: 10px;
-  }
 }
 @media (min-width: 1259px) {
   .review-btns {
@@ -1114,8 +1136,10 @@ p {
   font-weight: bold;
 }
 
-.mr {
-  border-radius: 50%;
+.img-smllogo img {
+  height: 47px;
+  width: 47px;
+  border-radius: 100%;
 }
 
 .news-col {
@@ -1484,13 +1508,14 @@ p {
   flex-direction: column;
   padding: 58px 0px 50px;
   background-color: #dddddd;
-  padding: 55px 15px 51px 15px;
+  padding: 50px 15px 51px 15px;
 }
 .sign-up h2 {
   color: #333645;
   font-size: 32px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 35.2px;
 }
 
 form label {
@@ -1702,6 +1727,57 @@ like a tickmark */
     width: 570px;
   }
 }
+.tooltip {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip:hover .info {
+  visibility: visible;
+}
+
+#second {
+  margin: 75px 0 0 52px !important;
+}
+
+.info {
+  width: 200px;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+  position: absolute;
+  visibility: hidden;
+  margin: -105px 0 0 -100px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.arrow {
+  position: absolute;
+  margin: 10px 0 0 88px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
 footer {
   display: flex;
   flex-direction: column;

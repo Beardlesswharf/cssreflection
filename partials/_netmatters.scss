@@ -25,6 +25,9 @@
   text-size-adjust: 100%;
   letter-spacing: 0.3px;
 }
+.h2b {
+  line-height: 39.6px;
+}
 
 .pa {
  font-size: 16px;
@@ -190,9 +193,7 @@ flex-direction: column;
     .btn-trust {
       margin-left: 0px;
     }
-    .h2b {
-      padding-top: 10px;
-    }
+   
    }
    @media (min-width :1259px) {
     .review-btns {

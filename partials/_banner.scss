@@ -7,7 +7,7 @@
     object-fit: fill;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/main-pic.webp");
+    // background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/main-pic.webp");
    }
     // .banner-over{
     //   display: flex;
@@ -63,7 +63,12 @@
         max-width: 660px;
     }
   }
-
+ 
+  @media (max-width: $breakpoint-s) {
+    .banner {
+        background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/main-pic.webp");
+    }
+  }
   @media (min-width: $breakpoint-s) {
     .banner {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../img/main-pic.webp");
