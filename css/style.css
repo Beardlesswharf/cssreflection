@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0px;
-  font-family: "poppins", sans-serif;
 }
 
 html {
@@ -310,23 +309,6 @@ body {
     flex-direction: row;
   }
 }
-.hamburger-menu {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  height: 26px;
-  width: 33px;
-  cursor: pointer;
-  margin-left: -2px;
-}
-
-.hamburger-menu .bar {
-  height: 4px;
-  background: white;
-  transform-origin: left;
-  transition: all 0.5s;
-}
-
 header {
   display: flex;
   flex-direction: column;
@@ -741,7 +723,7 @@ header {
   .container {
     width: 975px;
   }
-  #search, #search1 {
+  #search {
     display: none;
     border-radius: 3px;
   }
@@ -761,7 +743,7 @@ header {
   }
 }
 @media (min-width: 1259px) {
-  #search, #search1 {
+  #search {
     display: flex;
     min-width: 240px;
   }
@@ -897,92 +879,6 @@ p {
   align-self: center;
 }
 
-.poz-me {
-  position: relative;
-}
-
-.tooltip {
-  display: flex;
-  flex-direction: column;
-  visibility: hidden;
-  width: 260px;
-  height: auto;
-  padding: 20px;
-  color: white;
-  background-color: #333645;
-  position: absolute;
-  z-index: 1;
-  bottom: 170%;
-  margin-left: -35px;
-  align-items: center;
-}
-.tooltip h3 {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.4px;
-  line-height: 19.8px;
-  padding-bottom: 17px;
-}
-.tooltip .line-me {
-  border-top: 3px solid white;
-  flex-grow: 1;
-  margin: 0 10px;
-  width: 28px;
-  margin-bottom: 11px;
-}
-.tooltip p {
-  font-size: 13px;
-  letter-spacing: 0.4px;
-  line-height: 22px;
-  font-weight: 300;
-}
-
-.z {
-  margin-left: 15px;
-}
-
-.x {
-  margin-left: -90px;
-}
-
-.c {
-  margin-left: 35px;
-}
-
-.item:hover .tooltip {
-  visibility: visible;
-}
-
-.bottom-sponsor {
-  overflow: visible;
-}
-
-.tooltip::after {
-  content: " ";
-  position: absolute;
-  top: 100%; /* At the bottom of the tooltip */
-  left: 50%;
-  margin-left: -40px;
-  border-width: 37.5px;
-  border-style: solid;
-  border-color: #333645 transparent transparent transparent;
-}
-
-@media (max-width: 991px) {
-  .tooltip {
-    margin-left: -65px;
-    bottom: 210%;
-  }
-  .z {
-    margin-left: -30px;
-  }
-  .x {
-    margin-left: -105px;
-  }
-  .c {
-    margin-left: -20px;
-  }
-}
 .container-welcome {
   display: flex;
   flex-direction: column;
@@ -1223,10 +1119,8 @@ p {
   font-weight: bold;
 }
 
-.img-smllogo img {
-  height: 47px;
-  width: 47px;
-  border-radius: 100%;
+.mr {
+  border-radius: 50%;
 }
 
 .news-col {
@@ -1245,7 +1139,6 @@ p {
   flex-direction: column;
   text-decoration: none;
   max-width: 720px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 35px 0px;
 }
 .news-seo img {
   width: 100%;
@@ -1580,7 +1473,7 @@ p {
     padding-bottom: 20px;
   }
   .news-seo, .news-text {
-    width: 369px;
+    width: 370px;
   }
   .hide-this {
     display: flex;
@@ -1596,14 +1489,13 @@ p {
   flex-direction: column;
   padding: 58px 0px 50px;
   background-color: #dddddd;
-  padding: 50px 15px 51px 15px;
+  padding: 55px 15px 51px 15px;
 }
 .sign-up h2 {
   color: #333645;
   font-size: 32px;
   font-weight: 400;
-  margin-bottom: 15px;
-  line-height: 35.2px;
+  margin-bottom: 20px;
 }
 
 form label {
