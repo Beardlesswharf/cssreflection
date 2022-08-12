@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0px;
+    font-family: 'poppins', sans-serif;
   
 }
 
@@ -20,15 +21,15 @@ body {
     margin: 0;
     // width: 10000px;
 }
-#wrapper {
-    display: flex;
-    flex-direction: column;
-    // width: 100vw;
-    // width: 100vw;
-    // padding-right: 15px;
-     }
-.main-outer {
-    height: 100%;
-    // width: 100vw;
-     //problem with scroll bar guttering
-}
+// #wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     // width: 100vw;
+//     // width: 100vw;
+//     // padding-right: 15px;
+//      }
+// .main-outer {
+//     height: 100%;
+//     // width: 100vw;
+//      //problem with scroll bar guttering
+// }

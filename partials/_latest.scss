@@ -11,15 +11,21 @@
         font-weight: bold;
       }
   }
-  
-  .mr {
-    border-radius: 50%;
+  .img-smllogo {
+    img {
+    height: 47px;
+    width: 47px;
+    border-radius: 100%;
   }
+}
+ 
   .news-col {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
+    position: relative;
     transition: transform ease 500ms;
+    
      }
   
   .news-col:hover {
@@ -31,6 +37,7 @@
     flex-direction: column;
     text-decoration: none;
     max-width: 720px;
+    box-shadow: rgba(0,0,0,0.1) 0px 3px 35px 0px;
     img {
       width: 100%;
       object-fit: cover;
@@ -41,7 +48,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-      }
+  }
   
   .mini-news:hover {
     text-decoration: underline;
@@ -60,7 +67,7 @@
     @mixin mini-news {
       position: absolute;
       top: 20px;
-      right: 0px;
+      right: 15px;
       font-size: 13px;
       padding: 1px 10px;
       color: white;
@@ -140,7 +147,6 @@
       font-size: .875rem;
       color: $primary-color;
      }
-   
   }
 
   .p-weak {
@@ -157,7 +163,6 @@
     margin-bottom: 35px;
     font-size: 26px;
   }
-
 .hidden-bottom {
   justify-content: center;
 }
@@ -175,6 +180,12 @@
     border-bottom: 2px solid $primary-color;
   }
 
+  @media (max-width :$breakpoint-xs) {
+    .mini-news {
+      top: 50px;
+      right: 0px;
+    }
+  }
   @media (min-width :$breakpoint-xs) {
     .news-3-col {
       display: flex;
@@ -185,6 +196,7 @@
       padding-bottom: 50px;
       
     }
+   
     .news-heading {
       display: flex;
       flex-direction: row;
@@ -252,7 +264,7 @@
       padding-bottom: 20px;
     }
     .news-seo, .news-text {
-      width: 370px;
+      width: 369px;
     }
     .hide-this {
       display: flex;
