@@ -260,6 +260,7 @@ border-bottom-right-radius: 10px;
  li {
     padding: 10px 15.02px;
     font-size: 13px;
+
  }
  a {
     text-decoration: none;
@@ -375,7 +376,7 @@ a:hover {
     .container {
         width: 975px;
     }
-    #search {
+    #search, #search1 {
         display: none;
         border-radius: 3px;
     }
@@ -396,7 +397,7 @@ a:hover {
 
   }
   @media (min-width :1259px) {
-    #search {
+    #search, #search1 {
         display: flex;
         min-width: 240px;
     }
